@@ -5,8 +5,8 @@ import './Speaker.css';
 
 const Speaker = () => {
   return (
-    <div>
-    
+    <div className="bg-white">
+      <div>Parlante</div>
     </div>
   );
 };

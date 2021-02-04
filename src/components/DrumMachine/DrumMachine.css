@@ -1,3 +1,11 @@
 .container-fluid {
   max-width: 992px;
 }
+
+#drum-machine {
+  outline: 3px dashed greenyellow;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}

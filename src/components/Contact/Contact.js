@@ -6,7 +6,7 @@ import './Contact.css'
 const Contact = () => {
   return (
     <div className="container-fluid">
-      <p id="author" className="text-white text-right mt-2">By Gabit</p>
+      <p id="author" className="text-white text-end mt-2">By Gabit</p>
     </div>
   );
 };
