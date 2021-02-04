@@ -8,6 +8,8 @@ import Screen from '../Screen/Screen';
 import DrumPad from '../DrumPad/DrumPad';
 import VolumeControl from '../VolumeControl/VolumeControl';
 import PowerButton from '../PowerButton/PowerButton';
+import Contact from '../Contact/Contact';
+import Speaker from '../Speaker/Speaker';
 
 class DrumMachine extends Component {
 
@@ -67,17 +69,42 @@ class DrumMachine extends Component {
     });
 
     return (
-      <div id="drum-machine">
-        <Screen 
-          content={this.state.screen}
-          turnOn={this.state.on}
-          />
-        <PowerButton />
-        <VolumeControl />
-        <DrumPad 
-          actionButton={this.handlePressedPadButton}
-          turnOn={this.state.on}
-        />
+      <div className="container-fluid bg-danger">
+        <div id="drum-machine" className="bg-white w-75 mx-auto">
+          <div className="row">
+            <div className="col">
+             <Speaker />
+            </div>
+            <div className="col">
+              <Screen 
+                content={this.state.screen}
+                turnOn={this.state.on}
+              />
+            </div>
+            <div className="col">
+              <Speaker />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="row">
+                <div className="col">
+                  <PowerButton />
+                </div>
+                <div className="col">
+                  <VolumeControl />
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <DrumPad 
+                actionButton={this.handlePressedPadButton}
+                turnOn={this.state.on}
+              />
+            </div>
+          </div>
+        </div>
+        <Contact />
       </div>
     );
   }
