@@ -17,7 +17,7 @@ class DrumMachine extends Component {
     super();
     this.state = {
       on: false,
-      screen: "Reptilia",
+      screen: "",
       volume: 0,
       lastInputs: ""
     }
@@ -72,31 +72,31 @@ class DrumMachine extends Component {
       <div className="container-fluid">
         <div id="drum-machine" className="bg-white w-75 mx-auto">
           <div className="row bg-warning">
-            <div className="col-md-3 d-none d-md-block">
+            <div className="col-sm-3 d-none d-sm-block">
              <Speaker />
             </div>
-            <div className="col-md-6">
+            <div className="col-sm-6">
               <Screen 
                 content={this.state.screen}
                 turnOn={this.state.on}
               />
             </div>
-            <div className="col-md-3 d-none d-md-block">
+            <div className="col-sm-3 d-none d-sm-block">
               <Speaker />
             </div>
           </div>
-          <div className="row d-flex flex-column flex-md-row-reverse bg-info">
-            <div className="col-md-4 bg-success">
+          <div className="row d-flex flex-column flex-sm-row-reverse bg-info">
+            <div className="col-sm-4 bg-success">
               <div className="row">
-                <div className="col-8 col-md-6 bg-white">
+                <div className="col-8 col-sm-6 bg-white">
                   <VolumeControl />
                 </div>
-                <div className="col-4 col-md-6 bg-info">
+                <div className="col-4 col-sm-6 bg-info">
                   <PowerButton />
                 </div>
               </div>
             </div>
-            <div className="col-md-8 bg-secondary">
+            <div className="col-sm-8 bg-secondary">
               <DrumPad 
                 actionButton={this.handlePressedPadButton}
                 turnOn={this.state.on}

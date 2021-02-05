@@ -1,0 +1,22 @@
+.speaker-container {
+  height: 100%;
+}
+
+.frame {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  background-color: black;
+}
+
+.membrane {
+  height: 45px;
+  width: 45px;
+  background-color: gray;
+}
+
+.dust-cap {
+  height: 15px;
+  width: 15px;
+  background-color: black;
+}
