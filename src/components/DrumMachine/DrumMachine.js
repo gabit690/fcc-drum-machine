@@ -17,7 +17,7 @@ class DrumMachine extends Component {
     super();
     this.state = {
       on: false,
-      screen: "PANTALLA",
+      screen: "Reptilia",
       volume: 0,
       lastInputs: ""
     }

@@ -1,0 +1,7 @@
+#display {
+  height: 50px;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: rgba(152, 251, 152, 0.75);
+  overflow: hidden;
+}
