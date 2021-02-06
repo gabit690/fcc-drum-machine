@@ -88,7 +88,7 @@ class DrumMachine extends Component {
           <div className="row d-flex flex-column flex-sm-row-reverse bg-info">
             <div className="col-sm-4 bg-success">
               <div className="row">
-                <div className="col-8 col-sm-6 bg-white">
+                <div className="col-8 col-sm-6 d-flex align-items-center">
                   <VolumeControl />
                 </div>
                 <div className="col-4 col-sm-6">
