@@ -91,7 +91,7 @@ class DrumMachine extends Component {
                 <div className="col-8 col-sm-6 bg-white">
                   <VolumeControl />
                 </div>
-                <div className="col-4 col-sm-6 bg-info">
+                <div className="col-4 col-sm-6">
                   <PowerButton />
                 </div>
               </div>
