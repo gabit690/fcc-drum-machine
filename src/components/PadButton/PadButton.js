@@ -12,7 +12,7 @@ const PadButton = (props) => {
   return (
     <button
       id={props.soundId}
-      className="drum-pad"
+      className="btn btn-outline-success rounded-circle drum-pad fw-bold"
       onClick={handleClick}
     >
       {props.value}
