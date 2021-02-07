@@ -4,6 +4,7 @@
   }
 
   #range-controler {
+    height: 30px;
     transform: rotate(-90deg);
   }
 }
