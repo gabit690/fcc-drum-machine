@@ -7,7 +7,7 @@ import './VolumeControl.css'
 const VolumeControl = (props) => {
   return (
     <div className="volume-container container-fluid d-flex justify-content-center">
-      <input type="range" />
+      <input id="range-controler" type="range" />
     </div>
   );
 };

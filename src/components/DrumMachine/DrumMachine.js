@@ -70,7 +70,7 @@ class DrumMachine extends Component {
 
     return (
       <div className="container-fluid">
-        <div id="drum-machine" className="bg-danger mx-auto rounded">
+        <div id="drum-machine" className="bg-danger mx-auto">
           <div className="row">
             <div className="col-sm-3 d-none d-sm-block">
              <Speaker />
@@ -85,9 +85,9 @@ class DrumMachine extends Component {
               <Speaker />
             </div>
           </div>
-          <div className="row d-flex flex-column flex-sm-row-reverse">
-            <div className="col-sm-4">
-              <div className="row">
+          <div className="row d-flex justify-content-center flex-column flex-sm-row-reverse">
+            <div className="col-sm-2">
+              <div className="row d-flex align-items-center flex-sm-column-reverse">
                 <div className="col-8 col-sm-6 d-flex align-items-center">
                   <VolumeControl />
                 </div>
@@ -96,7 +96,7 @@ class DrumMachine extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-sm-8">
+            <div className="col-sm-9">
               <DrumPad 
                 actionButton={this.handlePressedPadButton}
                 turnOn={this.state.on}
