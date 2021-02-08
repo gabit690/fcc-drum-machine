@@ -7,6 +7,10 @@
   overflow: hidden;
 }
 
+#display.active {
+  background-color: rgba(152, 251, 152, 1);
+}
+
 @media screen and (min-width: 576px) {
   #display {
     width: 100%;

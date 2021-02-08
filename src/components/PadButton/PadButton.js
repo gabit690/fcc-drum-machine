@@ -14,6 +14,7 @@ const PadButton = (props) => {
       id={props.soundId}
       className="btn btn-outline-success rounded-circle drum-pad fw-bold shadow m-sm-1"
       onClick={handleClick}
+      disabled={!props.active}
     >
       {props.value}
       <audio

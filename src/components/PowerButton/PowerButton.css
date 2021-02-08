@@ -1,3 +1,7 @@
+.btn-power-container .btn {
+  box-shadow: -1px 2px 3px black;
+}
+
 .bi-power {
   font-size: 26px;
 }

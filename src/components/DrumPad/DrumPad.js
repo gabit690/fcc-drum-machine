@@ -9,29 +9,29 @@ const DrumPad = (props) => {
     <div className="container-fluid d-flex justify-content-center">
       <div className="pad-buttons my-3">
         <PadButton
-          soundId="Chord-1"
-          audio="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"
+          soundId="Closed-HH-2"
+          audio="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
           action={props.actionButton}
           value="Q"
           active={props.turnOn}
         />
         <PadButton 
-          soundId="Chord-2"
-          audio="https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3"
+          soundId="Open-HH-1"
+          audio="https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"
           action={props.actionButton}
           value="W"
           active={props.turnOn}
         />
         <PadButton 
-          soundId="Chord-3"
-          audio="https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3"
+          soundId="Open-HH-2"
+          audio="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
           action={props.actionButton}
           value="E"
           active={props.turnOn}
           />
         <PadButton 
-          soundId="Open-HH"
-          audio="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
+          soundId="Closed-HH-1"
+          audio="https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"
           action={props.actionButton}
           value="A"
           active={props.turnOn}
@@ -51,8 +51,8 @@ const DrumPad = (props) => {
           active={props.turnOn}
         />
         <PadButton 
-          soundId="Closed-HH"
-          audio="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
+          soundId="Kick-&-Hat"
+          audio="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
           action={props.actionButton}
           value="Z"
           active={props.turnOn}
@@ -60,7 +60,8 @@ const DrumPad = (props) => {
         <PadButton 
           soundId="Kick"
           audio="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
-          action={props.actionButton} value="X"
+          action={props.actionButton} 
+          value="X"
           active={props.turnOn}
         />
         <PadButton 

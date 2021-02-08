@@ -6,17 +6,32 @@
   position: relative;
   height: 60px;
   width: 60px;
-  background-color: black;
+  background-image: radial-gradient(black 65%, white 75%);
 }
 
 .membrane {
   height: 45px;
   width: 45px;
-  background-color: gray;
+  background-image: radial-gradient( lightgrey 25%, dimgray 65%);
 }
 
 .dust-cap {
   height: 15px;
   width: 15px;
-  background-color: black;
+  background-image: radial-gradient(black 50%, white 75%);
+}
+
+.frame.playing {
+  animation: tocar .5s linear 0s infinite;
+}
+
+@keyframes tocar {
+  0%, 25% {
+    height: 60px;
+    width: 60px;
+  }
+  100% {
+    height: 55px;
+    width: 55px;
+  }
 }

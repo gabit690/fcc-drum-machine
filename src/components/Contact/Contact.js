@@ -17,13 +17,13 @@ const Contact = () => {
             <div className="modal-body">
               <div className="row">
                 <div className="col-4 d-flex justify-content-center align-items-center">
-                  <a href="#"><i className="bi bi-github"></i></a>
+                  <a href="https://github.com/gabit690" target="_blank"><i className="bi bi-github"></i></a>
                 </div>
                 <div className="col-4 d-flex justify-content-center align-items-center">
-                  <a href="#"><i className="bi bi-linkedin"></i></a>
+                  <a href="https://linkedin.com/in/jg-valeriano" target="_blank"><i className="bi bi-linkedin"></i></a>
                 </div>
                 <div className="col-4 d-flex justify-content-center align-items-center">
-                  <a href="#"><i className="bi bi-twitter"></i></a>
+                  <a href="https://twitter.com/Gabit90" target="_blank"><i className="bi bi-twitter"></i></a>
                 </div>
               </div>
             </div>
