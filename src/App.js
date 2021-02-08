@@ -10,5 +10,3 @@ function App() {
 }
 
 export default App;
-
-// Reference: https://codepen.io/freeCodeCamp/full/MJyNMd.

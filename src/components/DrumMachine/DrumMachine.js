@@ -36,12 +36,16 @@ document.body.addEventListener("keydown", function(event) {
 
 });
 
+const secretSong = document.createElement("AUDIO");
+secretSong.setAttribute("src","./reptilia.mp3");
+document.body.appendChild(secretSong);
+
 class DrumMachine extends Component {
 
   constructor() {
     super();
     this.state = {
-      on: false,
+      on: true,
       screen: "",
       volume: 50,
       lastInputs: "",
@@ -81,13 +85,13 @@ class DrumMachine extends Component {
     const audio = document.getElementById(pressed.innerText);
     audio.currentTime = 0;
 
-    this.setState({screen: sound});
+    this.setState({screen: sound.replace(/-/g, " ")});
 
     if (/[qweasdzxc]/i.test(char)) {
 
       let inputs = "";
 
-      if (this.state.lastInputs.length < 20) {
+      if (this.state.lastInputs.length < 16) {
         inputs = this.state.lastInputs + char;
       } else {
         inputs = this.state.lastInputs.slice(1, this.state.lastInputs.length) + char;
@@ -100,15 +104,15 @@ class DrumMachine extends Component {
   }
 
   secret(inputs) {
-    if (inputs === "????") {
-      let secretSong = document.createElement("AUDIO");
-      secretSong.setAttribute("src","https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3");
-      document.body.appendChild(secretSong);
+    if (inputs === "XDXDXDXDXDXDXDXD" && !this.state.playing) {
+      secretSong.volume = this.state.volume / 100;
       secretSong.play();
-      this.setState({playing: true});
+      secretSong.addEventListener("ended", () => {
+        this.setState({lastInputs: "", playing: false});
+      });
+      this.setState({screen: "REPTILIA", lastInputs: "", playing: true});
     }
   }
-
 
   render() {
 
