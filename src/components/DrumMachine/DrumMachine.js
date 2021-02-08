@@ -46,7 +46,7 @@ class DrumMachine extends Component {
     super();
     this.state = {
       on: true,
-      screen: "",
+      screen: "Hello!",
       volume: 50,
       lastInputs: "",
       playing: false
@@ -140,6 +140,7 @@ class DrumMachine extends Component {
                   <VolumeControl 
                     turnOn={this.state.on}
                     changeVolume={this.setVolume}
+                    volume={this.state.volume}
                   />
                 </div>
                 <div className="col-4 col-sm-6">
@@ -151,6 +152,7 @@ class DrumMachine extends Component {
               <DrumPad 
                 actionButton={this.handlePressedPadButton}
                 turnOn={this.state.on}
+                volume={this.state.volume}
               />
             </div>
           </div>

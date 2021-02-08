@@ -17,9 +17,9 @@ ___
 
 **Profesión:** Developer y eterno estudiante.
 
-**Fecha de inicio:** 01/01/2021  
+**Fecha de inicio:** 01/02/2021  
 
-**Fecha de finalización:** ??/??/2021
+**Fecha de finalización:** 08/02/2021
 
 [FCC]: https://www.freecodecamp.org/
 

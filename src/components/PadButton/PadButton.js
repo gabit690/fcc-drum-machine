@@ -5,7 +5,9 @@ import './PadButton.css';
 const PadButton = (props) => {
 
   function handleClick(event) {
-    document.getElementById(event.target.innerText).play();
+    const audio = document.getElementById(event.target.innerText);
+    audio.volume = (props.volume / 100);
+    audio.play();
     props.action(event.target.id, event.target.innerText);
   }
   

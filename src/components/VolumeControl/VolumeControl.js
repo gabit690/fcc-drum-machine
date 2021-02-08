@@ -12,7 +12,7 @@ const VolumeControl = (props) => {
 
   return (
     <div className="volume-container container-fluid d-flex justify-content-center align-items-center">
-      <input id="range-controler" type="range" onChange={handleChange} disabled={!props.turnOn}/>
+      <input id="range-controler" type="range" value={props.volume} onChange={handleChange} disabled={!props.turnOn}/>
     </div>
   );
 };
