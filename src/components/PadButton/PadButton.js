@@ -8,7 +8,7 @@ const PadButton = (props) => {
     document.getElementById(event.target.innerText).play();
     props.action(event.target.id, event.target.innerText);
   }
-
+  
   return (
     <button
       id={props.soundId}

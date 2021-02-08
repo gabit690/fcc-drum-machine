@@ -11,6 +11,10 @@
   --bs-gutter-x: 0;
 }
 
+.pad-active {
+  background-color: green !important;
+}
+
 @media screen and (min-width: 400px) {
   #drum-machine {
     width: 55%;

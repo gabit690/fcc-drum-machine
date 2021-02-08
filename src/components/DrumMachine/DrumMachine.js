@@ -11,6 +11,31 @@ import PowerButton from '../PowerButton/PowerButton';
 import Contact from '../Contact/Contact';
 import Speaker from '../Speaker/Speaker';
 
+document.body.addEventListener("keydown", function(event) {
+
+  const key = event.key.toUpperCase();
+
+  switch(key) {
+    case "Q":
+    case "W":
+    case "E":
+    case "A":
+    case "S":
+    case "D":
+    case "Z":
+    case "X":
+    case "C": document.getElementById(key).parentElement.classList.toggle("pad-active");
+              setTimeout(() => {
+                document.getElementById(key).parentElement.classList.toggle("pad-active");
+              }, 0);
+              document.getElementById(key).parentElement.click();
+              break;
+    case "P": document.getElementById("power-button").click();
+              break;
+  }
+
+});
+
 class DrumMachine extends Component {
 
   constructor() {
@@ -25,6 +50,7 @@ class DrumMachine extends Component {
     this.switchPower = this.switchPower.bind(this);
     this.setVolume = this.setVolume.bind(this);
     this.handlePressedPadButton = this.handlePressedPadButton.bind(this);
+    this.secret = this.secret.bind(this);
   }
 
   switchPower() {
@@ -68,21 +94,23 @@ class DrumMachine extends Component {
       }
 
       this.setState({lastInputs: inputs});
-      // secret(inputs);
+      this.secret(inputs);
     }
 
   }
 
+  secret(inputs) {
+    if (inputs === "????") {
+      let secretSong = document.createElement("AUDIO");
+      secretSong.setAttribute("src","https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3");
+      document.body.appendChild(secretSong);
+      secretSong.play();
+      this.setState({playing: true});
+    }
+  }
+
+
   render() {
-
-    document.body.addEventListener("keydown", function(event) {
-      if (/[qweasdzxc]/i.test(event.key) && event.key.length === 1) {
-        document.getElementById(event.key.toUpperCase()).play();
-
-        // Permitir que se vuelva a reproducir el audio cortando el actual.
-        // Obtener el padre del audio para mostrar en la pantalla el tipo de sonido.
-      }
-    });
 
     return (
       <div className="container-fluid">
